@@ -8,26 +8,21 @@ module.exports = {
 };
 
 function insert(user) {
-    return null
-//   return db("users")
-//     .insert(user)
-//     .then(ids => {
-//       return findById(ids[0]);
-//     });
+  return db("users")
+    .insert(user)
+    .then(ids => {
+      return findById(ids[0]);
+    });
 }
 
 function findById(id) {
-    return null
-//   return db("users").where({ id });
+  return db("users").where({ id });
 }
 
 function remove(id) {
-    return null
-
-//   return findById(id)
-//     .del();
+  return findById(id).del();
 }
 
 function find() {
-return db("users");
+  return db("users");
 }
