@@ -10,5 +10,18 @@ describe("server", () => {
       const response = await request(server).get("/");
       expect(response.status).toBe(200);
     });
+    test("should return api:up", () => {
+    return request(server)
+        .get("/")
+        .then(response => {
+          expect(response.body).toEqual({ api: "up" });
+        });
+    });
+    test('with supertest syntax', () => {
+        return request(server).get('/')
+          .expect('Content-Length', "12")
+          .expect('Content-Type', /json/)
+      })
+  
   });
 });
