@@ -1,0 +1,27 @@
+{
+  "name": "node-server-testing-challenge2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env DB_ENV=testing jest --watchAll",
+    "server":"nodemon index.js",
+    "start":"node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.1",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2"
+  }
+}
